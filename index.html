@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+
+<body>
+
+    <div id="first-div">
+
+        <h1>Programming Languages</h1>
+
+        <ul class="lang">
+            <li id="first-li" class="p-languages">JaveScript</li>
+            <p>interactive websites</p>
+            <li id="second-li" class="p-languages">Kotlin</li>
+            <p>andorid apps</p>
+            <li id="last-li" class="p-languages">Swift</li>
+            <p>IOS apps</p>
+
+
+        </ul>
+    </div>
+
+    <h3>Clicks: <span id="clicks">0</span></h3>
+    <button type="button" onClick() = "add()">+</button>
+
+    <script>
+
+        let Kotlin = document.getElementById('second-li')
+        console.log(Kotlin)
+
+        let Languages = document.getElementsByClassName("p-languages")
+        console.log(Languages[2])
+
+        let list = document.getElementsByTagName('li')
+        console.log(list[2])
+
+        let text = document.querySelectorAll('.lang p')
+        console.log(text)
+
+        
+        let andorid = document.querySelector("#second-li")
+        andorid.style.textAlign = "center"
+
+
+        let LanguageList = document.querySelector(".lang")
+        let ruby = document.createElement("li")
+        ruby.innerText = "Ruby"
+        LanguageList.append(ruby)
+        console.log(LanguageList)
+
+        let Languagels = document.querySelector(".lang")
+        let ios = document.querySelectorAll("li")[2]
+        ios.remove()
+        console.log(Languagels)
+
+
+        let clicks = 0;
+        function add() {
+            clicks++;
+            document.getElementById("clicks").innerText = clicks
+        };
+
+    </script>
+    
+</body>
+</html>
